@@ -1,5 +1,6 @@
 <?php
 
+require 'conexao-mysql.php';
 include 'Artigo.php';
 
 $artigo = new Artigo();
