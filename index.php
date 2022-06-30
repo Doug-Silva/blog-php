@@ -1,9 +1,9 @@
 <?php
 
-require 'conexao-mysql.php';
-include 'Artigo.php';
+require 'config.php';
+include 'src/Artigo.php';
 
-$artigo = new Artigo();
+$artigo = new Artigo($mysql);
 $artigos = $artigo->exibirTodos();
 
 ?>
@@ -23,7 +23,7 @@ $artigos = $artigo->exibirTodos();
 
         <?php foreach ($artigos as $artigo) : ?>
             <h2>
-                <a href="<?php echo $artigo['link']; ?>">
+                <a href="artigo.php?id=<?php echo $artigo['id']; ?>">
                     <?php echo $artigo['titulo']; ?>
                 </a>
             </h2>
