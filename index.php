@@ -21,6 +21,7 @@ $artigos = $artigo->exibirTodos();
     <div id="container">
         <h1>Meu Blog</h1>
 
+        <!--foreach para buscar os artigos do banco de dados-->
         <?php foreach ($artigos as $artigo) : ?>
             <h2>
                 <a href="artigo.php?id=<?php echo $artigo['id']; ?>">
