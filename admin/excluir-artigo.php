@@ -1,14 +1,13 @@
 <?php
 
 require '../config.php';
-include '../src/Artigo.php';
+require '../src/Artigo.php';
 require '../src/redireciona.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $artigo = new Artigo($mysql);
     $artigo->remover($_POST['id']);
-
     redireciona('/blog-php/admin/index.php');
 }
 
@@ -16,23 +15,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+        <meta charset="UTF-8">
+        <title>Excluir Artigo</title>
+    </head>
 
-<head>
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-    <meta charset="UTF-8">
-    <title>Excluir Artigo</title>
-</head>
-
-<body>
-    <div id="container">
-        <h1>Você realmente deseja excluir o artigo?</h1>
-        <form method="post" action="excluir-artigo.php">
-            <p>
-                <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>" />
-                <button class="botao">Excluir</button>
-            </p>
-        </form>
-    </div>
-</body>
-
+    <body>
+        <div id="container">
+            <h1>Você realmente deseja excluir o artigo?</h1>
+            <form method="post" action="excluir-artigo.php">
+                <p>
+                    <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>" />
+                    <button class="botao">Excluir</button>
+                </p>
+            </form>
+        </div>
+    </body>
 </html>
