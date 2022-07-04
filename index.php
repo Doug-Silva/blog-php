@@ -18,9 +18,16 @@ $artigos = $artigo->exibirTodos();
 
     <body>
         <div id="container">
-            <h1>Meu Blog</h1>
+            <h1 class="tituloBlog">Meu Blog</h1>
+
+            <div id="container">
+                <a href="./admin/index.php" target="_self">
+                    <img class="botao3" width="70" height="70" src="./assets/img/admin.ico" alt="Admin"></a>
+            </div>
+
             <!--foreach para buscar os artigos do banco de dados-->
             <?php foreach ($artigos as $artigo) : ?>
+            <div class="containerConteudo">
                 <h2>
                     <a href="artigo.php?id=<?php echo $artigo['id']; ?>">
                         <?php echo $artigo['titulo']; ?>
@@ -29,6 +36,7 @@ $artigos = $artigo->exibirTodos();
                 <p>
                     <?php echo nl2br($artigo['conteudo']); ?>
                 </p>
+            </div>
             <?php endforeach; ?>
         </div>
     </body>

@@ -31,7 +31,8 @@ $artigos = $artigo->exibirTodos();
                     </div>
                 <?php endforeach; ?>
             </div>
-            <a class="botao botao-block" href="adicionar-artigo.php">Adicionar Artigo</a>
+            <a class="botao botao-block" href="adicionar-artigo.php">Adicionar Artigo</a><br>
+            <a class="botao botao-block" href="../index.php">Página Inicial</a>
         </div>
     </body>
 </html>
