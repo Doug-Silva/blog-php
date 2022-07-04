@@ -36,5 +36,12 @@ class Artigo
         $selecionaArtigo->execute();
         return $selecionaArtigo->get_result()->fetch_assoc();
     }
+
+    public function editar(string $id, string $titulo, $conteudo): void
+    {
+        $editaArtigo = $this->mysql->prepare('UPDATE artigos SET titulo = ?, conteudo = ? WHERE id = ?');
+        $editaArtigo->bind_param('sss', $titulo, $conteudo, $id);
+        $editaArtigo->execute();
+    }
 }
 
