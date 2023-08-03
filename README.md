@@ -9,7 +9,7 @@
   <p>Um blog com uma página administrativa, desenvolvido através do curso de PHP e MySQL: Criando uma webapp, da plataforma Alura</p>
 
   <div>
-    <a href="https://github.com/Doug-Silva/blog-php/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/react" 
+    <a href="https://github.com/Doug-Silva/blog-php/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" 
     alt="License MIT"></a>
   </div><br>
 
